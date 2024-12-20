@@ -1,0 +1,80 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Container for centering the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Letter styling */
+.letter h1 {
+    font-size: 200px;
+    font-weight: bold;
+    color: transparent;
+    background: url('hgenuine\ letter.jpg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: -5px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    transform: scaleX(0); /* Initially closed */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #b68f58;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #9a7a47;
+}
+
+/* Styling for the hidden message */
+.message {
+    display: none; /* Hidden initially */
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Fade-in effect for the message */
+.message.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optional: Background texture for the page */
+body {
+    background: #cfcfcf url('bg.jpg') repeat;
+    background-size: cover;
+}
